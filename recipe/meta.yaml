@@ -23,13 +23,13 @@ requirements:
     - pkg-config
     - make  # [unix]
   host:
-    - coin-or-utils
-    - coin-or-osi
-    - coin-or-clp
+    - coin-or-utils 2.11.6
+    - coin-or-osi 0.108.7
+    - coin-or-clp 1.17.7
     - zlib
     - bzip2
-    - ncurses
-    - readline
+    - ncurses 6.2
+    - readline 8.1
     - openblas {{ openblas }}         # [blas_impl == "openblas"]
   run:
     - ncurses
@@ -46,8 +46,9 @@ test:
     - test -f $PREFIX/include/coin/CglAllDifferent.hpp
 
 about:
-  home: https://projects.coin-or.org/Cgl
+  home: https://github.com/coin-or/Cgl
   dev_url: https://github.com/coin-or/Cgl
+  doc_url: https://coin-or.github.io/Cgl/Doxygen/
   license: EPL-2.0
   license_family: OTHER
   license_file: LICENSE
