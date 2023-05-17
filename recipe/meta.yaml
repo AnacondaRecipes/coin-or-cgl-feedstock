@@ -28,8 +28,6 @@ requirements:
     - coin-or-clp 1.17.7
     - zlib
     - bzip2
-    - ncurses 6.2
-    - readline 8.1
     - openblas {{ openblas }}         # [blas_impl == "openblas"]
   run:
     - ncurses
