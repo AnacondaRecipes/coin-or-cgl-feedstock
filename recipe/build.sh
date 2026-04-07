@@ -9,13 +9,13 @@ else
 fi
 
 if [[ "${target_platform}" == win-* ]]; then
-  COINUTILS_LIB=( --with-coinutils-lib='${LIBRARY_PREFIX}/lib/mkl_rt.lib ${LIBRARY_PREFIX}/lib/libCoinUtils.lib' )
+  COINUTILS_LIB=( --with-coinutils-lib='${libdir}/mkl_rt.lib ${libdir}/libCoinUtils.lib' )
   COINUTILS_INC=( --with-coinutils-incdir='${LIBRARY_PREFIX_COIN}' )
-  OSI_LIB=( --with-osi-lib='${LIBRARY_PREFIX}/lib/libOsi.lib' )
+  OSI_LIB=( --with-osi-lib='${libdir}/libOsi.lib' )
   OSI_INC=( --with-osi-incdir='${LIBRARY_PREFIX_COIN}' )
-  CLP_LIB=( --with-clp-lib='${LIBRARY_PREFIX}/lib/libClp.lib' )
+  CLP_LIB=( --with-clp-lib='${libdir}/libClp.lib' )
   CLP_INC=( --with-clp-incdir='${LIBRARY_PREFIX_COIN}' )
-  OSICLP_LIB=( --with-osiclp-lib='${LIBRARY_PREFIX}/lib/libOsiClp.lib' )
+  OSICLP_LIB=( --with-osiclp-lib='${libdir}/libOsiClp.lib' )
   OSICLP_INC=( --with-osiclp-incdir='${LIBRARY_PREFIX_COIN}' )
   EXTRA_FLAGS=( --enable-msvc=MD ) 
 else
