@@ -37,8 +37,8 @@ requirements:
     - coin-or-utils
     - coin-or-osi
     - coin-or-clp
-    - openblas-devel {{ openblas }}  # [unix]
-    - mkl-devel {{ mkl }}            # [win]
+    - openblas-devel {{ openblas }}  # [unix or (win and arm64)]
+    - mkl-devel {{ mkl }}            # [win64]
     - zlib {{ zlib }}
     - bzip2 {{ bzip2 }}
   run_constrained:
