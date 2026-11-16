@@ -24,10 +24,9 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}  # [unix]
     - gnuconfig
-    - pkg-config        # [unix]
+    - pkg-config
     - make              # [unix]
     - msys2-make        # [win]
-    - msys2-pkg-config  # [win]
     - msys2-grep        # [win]
     - msys2-sed         # [win]
     - msys2-bash        # [win]
