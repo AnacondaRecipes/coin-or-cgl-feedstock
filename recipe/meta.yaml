@@ -13,7 +13,7 @@ source:
     - patches/0002-Patch-for-downstream.patch
 
 build:
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage(name, min_pin='x.x', max_pin='x.x') }}
 
@@ -24,10 +24,9 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}  # [unix]
     - gnuconfig
-    - pkg-config        # [unix]
+    - pkg-config
     - make              # [unix]
     - msys2-make        # [win]
-    - msys2-pkg-config  # [win]
     - msys2-grep        # [win]
     - msys2-sed         # [win]
     - msys2-bash        # [win]
@@ -38,8 +37,8 @@ requirements:
     - coin-or-utils
     - coin-or-osi
     - coin-or-clp
-    - openblas-devel {{ openblas }}  # [unix]
-    - mkl-devel {{ mkl }}            # [win]
+    - openblas-devel {{ openblas }}  # [unix or (win and arm64)]
+    - mkl-devel {{ mkl }}            # [win64]
     - zlib {{ zlib }}
     - bzip2 {{ bzip2 }}
   run_constrained:
@@ -56,8 +55,9 @@ test:
     - strings %LIBRARY_LIB%\\libCgl.lib | findstr /C:"RuntimeLibrary=MD"  # [win]
 
 about:
-  home: https://projects.coin-or.org/Cgl
+  home: https://www.coin-or.org/projects/#cgl
   dev_url: https://github.com/coin-or/Cgl
+  doc_url: https://www.coin-or.org/Cgl/Doxygen/
   license: EPL-2.0
   license_family: OTHER
   license_file: LICENSE
