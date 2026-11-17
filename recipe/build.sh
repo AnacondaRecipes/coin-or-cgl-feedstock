@@ -11,6 +11,8 @@ fi
 if [[ "${target_platform}" == win-* ]]; then
   if [[ "${target_platform}" == win-arm64 ]]; then
     COINUTILS_LIB=( --with-coinutils-lib='${libdir}/openblas.lib ${libdir}/libCoinUtils.lib' )
+    # lib.exe already indexes the archive; GNU ranlib drops that MSVC linker member.
+    export RANLIB=:
   else
     COINUTILS_LIB=( --with-coinutils-lib='${libdir}/mkl_rt.lib ${libdir}/libCoinUtils.lib' )
   fi
