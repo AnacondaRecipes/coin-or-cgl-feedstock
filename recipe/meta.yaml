@@ -55,8 +55,9 @@ test:
     - strings %LIBRARY_LIB%\\libCgl.lib | findstr /C:"RuntimeLibrary=MD"  # [win]
 
 about:
-  home: https://projects.coin-or.org/Cgl
+  home: https://www.coin-or.org/projects/#cgl
   dev_url: https://github.com/coin-or/Cgl
+  doc_url: https://www.coin-or.org/Cgl/Doxygen/
   license: EPL-2.0
   license_family: OTHER
   license_file: LICENSE
